@@ -6,6 +6,10 @@ applications:
     #- route: backlog-pal-roshan.apps.evans.pal.pivotal.io
   memory: 1G
   instances: 1
+  env:
+    GRANT_TYPE: client_credentials
+    SECURITY_USER_NAME: actuator
+    SECURITY_USER_PASSWORD: operations4red
   #env:
     #- REGISTRATION_SERVER_ENDPOINT: http://registration-pal-nikhil.apps.evans.pal.pivotal.io
     #REGISTRATION_SERVER_ENDPOINT: http://registration-pal-roshan.apps.evans.pal.pivotal.io
@@ -13,3 +17,4 @@ applications:
   - tracker-backlog-database
   - tracker-service-registry
   - tracker-circuit-breaker-dashboard
+  - tracker-sso
